@@ -17,6 +17,10 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"oBat","order":2,"path":"objects/oBat/oBat.yy",},
+    {"name":"oCamera","order":1,"path":"objects/oCamera/oCamera.yy",},
+    {"name":"sBat","order":3,"path":"sprites/sBat/sBat.yy",},
+    {"name":"sGrama","order":2,"path":"sprites/sGrama/sGrama.yy",},
     {"name":"sPlayerWalk","order":1,"path":"sprites/sPlayerWalk/sPlayerWalk.yy",},
   ],
 }
