@@ -1,6 +1,5 @@
 var _border = 32 // MELHORIA NO CÓDIGO
 
-//var _border2 = 10
 
 if (y < oCamera.y-_border) {
 		y = oCamera.y+oCamera.camera_heidht+_border;
