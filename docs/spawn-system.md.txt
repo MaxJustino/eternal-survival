@@ -1,0 +1,29 @@
+# Sistema de Spawn de Inimigos
+
+O sistema de spawn foi implementado dentro do objeto:
+
+oGame
+
+---
+
+## Evento Create
+
+```gml
+cooldown_time = room_speed * 2
+cooldown = cooldown_time
+side = -1
+```
+
+Essas variáveis controlam o tempo entre os spawns.
+
+---
+
+## Evento Step
+
+O sistema gera inimigos em posições aleatórias fora da área visível da câmera.
+
+```gml
+instance_create_layer(_x,_y,"Instances",oBat)
+```
+
+Dessa forma os inimigos aparecem fora da tela e caminham até o jogador.

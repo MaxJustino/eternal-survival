@@ -1,0 +1,59 @@
+# Sistema de Inimigos
+
+O primeiro inimigo criado no projeto foi:
+
+oBat
+
+Sprite utilizado:
+
+sBat
+
+---
+
+## Refatoração do Código
+
+Foi criada uma variável chamada:
+
+```gml
+var _border = 32
+```
+
+Essa variável foi criada para melhorar a organização do código e evitar repetição de valores fixos.
+
+---
+
+## Sistema de Perseguição
+
+O inimigo calcula a direção do jogador utilizando a função:
+
+```gml
+dir = point_direction(x,y,oPlayer.x,oPlayer.y-10)
+
+move_x = lengthdir_x(spd,dir)
+move_y = lengthdir_y(spd,dir)
+
+x += move_x
+y += move_y
+```
+
+Com isso o inimigo se movimenta continuamente em direção ao player.
+
+---
+
+## Ajuste de direção do sprite
+
+```gml
+image_xscale = sign(move_x)
+```
+
+Essa linha faz com que o inimigo vire na direção do jogador.
+
+---
+
+## Organização de profundidade
+
+```gml
+depth = -y
+```
+
+Essa técnica organiza os sprites de acordo com sua posição vertical na tela.

@@ -1,0 +1,37 @@
+# Configuração de Renderização para Pixel Art
+
+O projeto utiliza resolução base de:
+
+320x180
+
+Escalada para:
+
+1280x720
+
+Essa abordagem mantém a proporção e densidade dos pixels.
+
+---
+
+## Problema encontrado
+
+Durante o desenvolvimento foi observado que os sprites ficavam borrados ao aumentar a resolução.
+
+Isso acontecia por causa da opção:
+
+Interpolate Colors Between Pixels
+
+Essa opção mistura pixels vizinhos para suavizar a imagem.
+
+---
+
+## Solução aplicada
+
+A interpolação de pixels foi desativada nas configurações gráficas do projeto.
+
+---
+
+## Resultado
+
+Pixels nítidos e bem definidos  
+Escala visual consistente  
+Fidelidade ao estilo clássico de pixel art

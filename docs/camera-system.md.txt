@@ -1,0 +1,35 @@
+# Sistema de Câmera
+
+Foi criado um objeto responsável por controlar a câmera do jogo.
+
+Objeto:
+
+oCamera
+
+---
+
+## Evento Create
+
+O evento Create armazena as dimensões da câmera.
+
+```gml
+camera_widht = camera_get_view_width(view_camera[0])
+camera_heidht = camera_get_view_height(view_camera[0])
+```
+
+---
+
+## Evento Step
+
+A câmera segue o jogador enquanto ele se move.
+
+```gml
+if (instance_exists(oPlayer)){
+    x = oPlayer.x - camera_widht / 2
+    y = oPlayer.y - 10 - camera_heidht / 2
+}
+
+camera_set_view_pos(view_camera[0],x,y)
+```
+
+O valor **-10** foi utilizado para ajustar o enquadramento da câmera em relação ao personagem.

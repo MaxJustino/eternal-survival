@@ -1,0 +1,80 @@
+# Sistema do Player
+
+## Criação do Objeto
+
+Foi criado o objeto:
+
+oPlayer
+
+O sprite associado ao objeto é:
+
+sPlayerIdle
+
+Após a criação, o objeto foi inserido dentro da Room1 arrastando para a área da sala.
+
+---
+
+## Configuração da Room
+
+Dentro de Room1 foram aplicadas as seguintes configurações:
+
+Room Settings
+
+Width: 320  
+Height: 180  
+
+A opção **Clear Display Buffer** foi ativada.
+
+---
+
+## Configuração de Viewport e Câmera
+
+Foi ativada a opção:
+
+Enable Viewports and Cameras
+
+Configuração da Viewport 0:
+
+Visible: Ativado  
+Width: 320  
+Height: 180  
+
+Viewport Properties:
+
+Width: 1280  
+Height: 720
+
+Essa configuração permite que o jogo utilize resolução base de 320x180 escalada para 1280x720.
+
+---
+
+## Sistema de Movimento
+
+Foi criado um evento **Step** dentro do objeto oPlayer para controlar a movimentação.
+
+Código utilizado:
+
+```gml
+hori_move = keyboard_check(vk_right) - keyboard_check(vk_left)
+vert_move = keyboard_check(vk_down) - keyboard_check(vk_up)
+```
+
+Essas variáveis controlam a movimentação horizontal e vertical do personagem.
+
+---
+
+## Movimento Diagonal
+
+Foi aplicado cálculo de direção para evitar que o personagem se mova mais rápido na diagonal.
+
+```gml
+var _dir = point_direction(0,0,hori_move,vert_move)
+
+hori_x = lengthdir_x(2,_dir)
+vert_y = lengthdir_y(2,_dir)
+
+x += hori_x
+y += vert_y
+```
+
+Isso garante velocidade uniforme em qualquer direção.

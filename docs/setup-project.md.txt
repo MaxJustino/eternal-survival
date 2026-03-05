@@ -1,0 +1,47 @@
+# Configuração Inicial do Projeto
+
+O projeto foi desenvolvido utilizando o GameMaker Studio. Como é a primeira vez utilizando a ferramenta, toda a estrutura está sendo documentada para facilitar análise e manutenção do código.
+
+## Criação de Sprites
+
+O primeiro passo foi a criação das sprites do personagem.
+
+Procedimento:
+
+1. Acessar a pasta **Sprites**
+2. Clicar com botão direito
+3. Selecionar **Create > Sprite**
+4. Clicar em **Edit Image**
+5. Selecionar **Image > Import Strip Image**
+
+---
+
+## Sprite Idle
+
+Sprite criado:
+
+sPlayerIdle
+
+Configurações utilizadas:
+
+Number of Frames: 13  
+Frames per Row: 13  
+Frame Width: 32  
+Frame Height: 32  
+FPS: 10
+
+---
+
+## Sprite Walk
+
+Sprite criado:
+
+sPlayerWalk
+
+Configurações utilizadas:
+
+Number of Frames: 8  
+Frames per Row: 8  
+Frame Width: 32  
+Frame Height: 32  
+FPS: 15
